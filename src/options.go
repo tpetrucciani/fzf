@@ -61,9 +61,9 @@ const usage = `usage: fzf [options]
                           [rounded|sharp|horizontal] (default: rounded)
     --margin=MARGIN       Screen margin (TRBL / TB,RL / T,RL,B / T,R,B,L)
     --info=STYLE          Finder info style [default|inline|hidden]
-    --prompt=STR          Input prompt (default: '> ')
-    --pointer=STR         Pointer to the current line (default: '>')
-    --marker=STR          Multi-select marker (default: '>')
+    --prompt=STR          Input prompt (default: '▶ ')
+    --pointer=STR         Pointer to the current line (default: '▶')
+    --marker=STR          Multi-select marker (default: '▶')
     --header=STR          String to print as header
     --header-lines=N      The first N lines of the input are treated as header
 
@@ -250,9 +250,9 @@ func defaultOptions() *Options {
 		FileWord:    false,
 		InfoStyle:   infoDefault,
 		JumpLabels:  defaultJumpLabels,
-		Prompt:      "> ",
-		Pointer:     ">",
-		Marker:      ">",
+		Prompt:      "▶ ",
+		Pointer:     "▶",
+		Marker:      "▶",
 		Query:       "",
 		Select1:     false,
 		Exit0:       false,

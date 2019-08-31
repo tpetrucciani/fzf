@@ -783,16 +783,16 @@ func (t *Terminal) printInfo() {
 		pos = 2
 	case infoInline:
 		pos = t.promptLen + t.queryLen[0] + t.queryLen[1] + 1
-		if pos+len(" < ") > t.window.Width() {
+		if pos+len(" ◀ ") > t.window.Width() {
 			return
 		}
 		t.move(0, pos, true)
 		if t.reading {
-			t.window.CPrint(tui.ColSpinner, t.strong, " < ")
+			t.window.CPrint(tui.ColSpinner, t.strong, " ◀ ")
 		} else {
-			t.window.CPrint(tui.ColPrompt, t.strong, " < ")
+			t.window.CPrint(tui.ColPrompt, t.strong, " ◀ ")
 		}
-		pos += len(" < ")
+		pos += len(" ◀ ")
 	case infoHidden:
 		return
 	}
