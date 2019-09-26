@@ -790,7 +790,7 @@ func (t *Terminal) printInfo() {
 		if t.reading {
 			t.window.CPrint(tui.ColSpinner, t.strong, " ◀ ")
 		} else {
-			t.window.CPrint(tui.ColPrompt, t.strong, " ◀ ")
+			t.window.CPrint(tui.ColInfo, t.strong, " ◀ ")
 		}
 		pos += len(" ◀ ")
 	case infoHidden:
